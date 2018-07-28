@@ -2,21 +2,22 @@ package model;
 
 import org.apache.log4j.Logger;
 
-public final class PersonaVO  {
+public final class PersonaVO {
 
 	private int id;
 	private String nombre;
 	private int edad;
 	private String profesion;
 	private String telefono;
-	
+
 	public static final Logger LOG = Logger.getLogger(PersonaVO.class);
 
 	public PersonaVO() {
-	
+
 	}
 
-	public PersonaVO(String nombre, int edad, String profesion, String telefono) {
+	public PersonaVO(int id, String nombre, int edad, String profesion, String telefono) {
+		this.id = id;
 		this.nombre = nombre;
 		this.edad = edad;
 		this.profesion = profesion;
@@ -29,7 +30,7 @@ public final class PersonaVO  {
 		try {
 			clon = super.clone();
 		} catch (CloneNotSupportedException e) {
-			
+
 		}
 		return clon;
 
