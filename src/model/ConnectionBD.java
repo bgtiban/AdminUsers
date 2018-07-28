@@ -21,7 +21,7 @@ public class ConnectionBD {
 		try {
 			sqlConn = DriverManager.getConnection(URL);
 			terminal = sqlConn.createStatement();
-			sqlConn.setAutoCommit(false);
+			// sqlConn.setAutoCommit(false);
 		} catch (SQLException e) {
 
 		}
